@@ -1,0 +1,30 @@
+﻿<Page x:Class="MyStackV_.Pacotes.Telas.CadastrodeEmpresa"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MyStackV_.Pacotes.Telas"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CadastrodeEmpresa">
+
+    <Grid>
+        <TextBox x:Name="Email" HorizontalAlignment="Left" Height="34" Margin="108,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+        <TextBox x:Name="SenhaEmpresa" HorizontalAlignment="Left" Height="34" Margin="108,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+        <TextBox x:Name="SenharepEmpresa" HorizontalAlignment="Left" Height="34" Margin="346,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+        <TextBox x:Name="NomeEmpresa" HorizontalAlignment="Left" Height="34" Margin="346,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+        <TextBox x:Name="Usuario" HorizontalAlignment="Left" Height="34" Margin="108,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="108,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" x:Name="Senha" />
+        <TextBox  HorizontalAlignment="Left" Height="34" Margin="346,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" x:Name="SenhaRepUsu"  />
+        <Button Content="Criar" HorizontalAlignment="Left" Height="27" Margin="260,321,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click"/>
+        <Label Content="E-mail" HorizontalAlignment="Left" Height="38" Margin="108,58,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label Content="Nome" HorizontalAlignment="Left" Height="38" Margin="346,58,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label Content="Repita senha" HorizontalAlignment="Left" Height="38" Margin="346,113,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label Content="Senha" HorizontalAlignment="Left" Height="38" Margin="108,113,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label Content="Usuario primario" HorizontalAlignment="Left" Height="38" Margin="108,169,0,0" VerticalAlignment="Top" Width="176"/>
+        <Label Content="senha usuario" HorizontalAlignment="Left" Height="38" Margin="108,225,0,0" VerticalAlignment="Top" Width="116"/>
+        <Label Content="Repita senha" HorizontalAlignment="Left" Height="38" Margin="346,225,0,0" VerticalAlignment="Top" Width="80"/>
+        <Button Content="X" HorizontalAlignment="Left" Height="17" Margin="287,364,0,0" VerticalAlignment="Top" Width="66" Click="Button_Click_1"/>
+
+    </Grid>
+</Page>
