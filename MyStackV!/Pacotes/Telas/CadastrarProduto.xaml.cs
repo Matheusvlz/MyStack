@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MyStackV_.Pacotes.Telas;
+using MyStackV_;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,24 @@ namespace MyStack.Pacotes.Telas
         public CadastrarProduto()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow?.NavigateToPage(new PaginaInicial());
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow?.NavigateToPage(new CadastrarSaida());
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow?.NavigateToPage(new CadastrarEntrada());
         }
     }
 }

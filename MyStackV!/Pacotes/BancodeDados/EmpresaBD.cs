@@ -79,8 +79,41 @@ namespace MyStackV_.Pacotes.BancodeDados
                 return 0;
             }
         }
+     
+        public bool ValidarAcessoempresa(string login, string senha)
+        {
+            bool status = true;
+            return status;
+
+            try
+            {
+                using (MySqlConnection conectar = conex.ObterConexao())
+                {
+                    conectar.Open();
+                    string query = "SELECT COUNT(*) FROM empresa WHERE Email = @Email AND Senha = @Senha";
+                    MySqlCommand command = new MySqlCommand(query, conectar);
+                    command.Parameters.AddWithValue("@Email", login);
+                    command.Parameters.AddWithValue("@Senha", senha);
 
 
+                    int resultado = Convert.ToInt32(command.ExecuteScalar());
+                    if (resultado > 0)
+                    {
+                        return status;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Dados Nao Coinsidem.");
+                        return status = false;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Erro: " + e.Message);
+                return status = false;
+            }
+        }
         public void ExcluirEmpresa()
         {
 

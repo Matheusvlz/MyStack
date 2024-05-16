@@ -25,6 +25,7 @@ namespace MyStack.Pacotes.Telas
         ConexãoBD bd;
         Empresa emp;
         UsuarioBD usuario;
+        public static int idEmp;
         public Login()
         {
             usuario = new UsuarioBD();    
@@ -51,9 +52,10 @@ namespace MyStack.Pacotes.Telas
            
          if(status == true)
             {
+                
                 LoginPag.Visibility = Visibility.Collapsed;
 
-
+                idEmp = usuario.ColocarIdUsuario(us);
                 MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
                 mainWindow?.NavigateToPage(new PaginaInicial());
                 MessageBox.Show("Deu Certo");
@@ -63,6 +65,11 @@ namespace MyStack.Pacotes.Telas
                 MessageBox.Show("Deu errado");
             }
 
+        }
+        public int ColocarId()
+        {
+            int id = idEmp;
+            return id;
         }
 
         private void Logar_Navigated(object sender, NavigationEventArgs e)

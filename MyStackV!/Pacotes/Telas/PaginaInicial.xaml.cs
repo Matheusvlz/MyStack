@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyStack.Pacotes.Telas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,36 @@ namespace MyStackV_.Pacotes.Telas
         public PaginaInicial()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow?.NavigateToPage(new Produtos());
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow?.NavigateToPage(new Fornecedores());
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow?.NavigateToPage(new CadastrarProduto());
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow?.NavigateToPage(new CadastrarFornecedor());
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow?.NavigateToPage(new CadastroUsuario());
         }
     }
 }

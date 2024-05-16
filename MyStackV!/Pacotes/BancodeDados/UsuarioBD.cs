@@ -83,6 +83,40 @@ namespace MyStackV_.Pacotes.BancodeDados
                 return status = false;
             }
         }
+        public int ColocarIdUsuario(string email)
+        {
+            try
+            {
+                using (MySqlConnection conectar = conex.ObterConexao())
+                {
+                    string query = "SELECT IdEmpresa FROM usuario WHERE Usuario = @Usuario";
+                    MySqlCommand command = new MySqlCommand(query, conectar);
+                    command.Parameters.AddWithValue("@Usuario", email);
+
+                    conectar.Open();
+                    object result = command.ExecuteScalar();
+                    if (result != null)
+                    {
+                        int idempresa = Convert.ToInt32(result);
+                        usuario.setIdempresa(idempresa);
+                        return idempresa;
+                    
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não foi possível encontrar uma empresa com o email fornecido.");
+                        return 0;
+                       
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Erro: " + e.Message);
+                return 0;
+              
+            }
+        }
         public void ExcluirUsuario()
         {
 

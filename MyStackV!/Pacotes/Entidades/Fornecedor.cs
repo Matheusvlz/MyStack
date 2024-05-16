@@ -6,9 +6,18 @@ using System.Threading.Tasks;
 
 namespace MyStack.Pacotes.Entidades
 {
-    
-            internal class Fornecedor
-            {
+
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    namespace MyStack.Pacotes.Entidades
+    {
+
+        internal class Fornecedor
+        {
 
             private int idfornecedor;
             private int idempresa;
@@ -104,6 +113,8 @@ namespace MyStack.Pacotes.Entidades
             {
                 return data;
             }
-        
+
+        }
     }
+
 }

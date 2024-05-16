@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MyStackV_.Pacotes.Telas;
+using MyStackV_;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,12 @@ namespace MyStack.Pacotes.Telas
         public CadastrarFornecedor()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow?.NavigateToPage(new PaginaInicial());
         }
     }
 }

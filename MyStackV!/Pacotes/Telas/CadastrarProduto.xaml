@@ -9,6 +9,9 @@
       Title="CadastrarProduto">
 
     <Grid>
-        
+        <Button Content="X" HorizontalAlignment="Left" Height="17" Margin="39,39,0,0" VerticalAlignment="Top" Width="66" Click="Button_Click_1"/>
+        <Button x:Name="B2" Content="Cadastrar Entrada" HorizontalAlignment="Left" Height="40" Margin="72,208,0,0" VerticalAlignment="Top" Width="200" Click="Button_Click_2"/>
+        <Button x:Name="B3" Content="Cadastrar Saida" HorizontalAlignment="Left" Height="40" Margin="72,277,0,0" VerticalAlignment="Top" Width="200" Click="Button_Click_3"/>
+
     </Grid>
 </Page>

@@ -13,16 +13,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MyStack.Pacotes.Telas
+namespace MyStackV_.Pacotes.Telas
 {
     /// <summary>
-    /// Interação lógica para ControleUsuarios.xam
+    /// Interação lógica para Fornecedores.xam
     /// </summary>
-    public partial class ControleUsuarios : Page
+    public partial class Fornecedores : Page
     {
-        public ControleUsuarios()
+        public Fornecedores()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow?.NavigateToPage(new PaginaInicial());
         }
     }
 }

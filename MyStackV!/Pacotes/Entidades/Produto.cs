@@ -1,196 +1,176 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MyStack.Pacotes.Entidades
 {
     internal class Produto
     {
-        private int idproduto;
-        private int idprodutosaida;
-        private int idempresa;
-        private string nomeproduto;
-        private string nomeprodutosaida;
-        private string dataentrada;
-        private string horaentrada;
-        private string datasaida;
-        private string horasaida;
-        private int unidade;
-        private int quantidade;
-        private int quantidadesaida;
-        private string tipo;
-        private double preco;
-        private double precosaida;
-        private int idmercadoria;
-        private string fornecedor;
+        private static int idproduto;
+        private static int idprodutosaida;
+        private static int idempresa;
+        private static string nomeproduto;
+        private static string nomeprodutosaida;
+        private static int quantidade;
+        private static int quantidadesaida;
+        private static string tipo;
+        private static double preco;
+        private static double precosaida;
+        private static int idmercadoria;
+        private static string descricao;
+        private static string fornecedor;
 
         public Produto()
         {
-            this.idempresa = 0;
-            this.idprodutosaida = 0;
-            this.precosaida = 0;
-            this.quantidadesaida = 0;
-            this.nomeprodutosaida = null;
-            this.dataentrada = null;
-            this.datasaida = null;
-            this.idmercadoria = 0;
-            this.idproduto = 0;
-            this.nomeproduto = null;
-            this.preco = 0;
-            this.quantidade = 0;
-            this.unidade = 0;
-            this.tipo = null;
-            this.horaentrada = null;
-            this.horasaida = null;
-            this.fornecedor = null;
-            
-
+            idempresa = 0;
+            idprodutosaida = 0;
+            precosaida = 0;
+            quantidadesaida = 0;
+            nomeprodutosaida = null;
+            idmercadoria = 0;
+            idproduto = 0;
+            nomeproduto = null;
+            preco = 0;
+            quantidade = 0;
+            tipo = null;
+            fornecedor = null;
+            descricao = null;
         }
 
-        public int getQuantidade()
+        public void SetDescricao(string descricao)
+        {
+            Produto.descricao = descricao;
+        }
+
+        public string GetDescricao()
+        {
+            return descricao;
+        }
+
+        public int GetQuantidade()
         {
             return quantidade;
         }
-        public void setUnidade(int unidade)
+
+        public void SetNomeprodutosaida(string nomeprodutosaida)
         {
-            this.unidade = unidade;
+            Produto.nomeprodutosaida = nomeprodutosaida;
         }
-        public void setDataentrada(string dataentrada)
-        {
-            this.dataentrada = dataentrada;
-        }
-        public string getDataentrada()
-        {
-            return dataentrada;
-        }
-        public void setNomeprodutosaida(string nomeprodutosaida)
-        {
-            this.nomeprodutosaida = nomeprodutosaida;
-        }
-        public string getNomeprodutosaida()
+
+        public string GetNomeprodutosaida()
         {
             return nomeprodutosaida;
         }
-        public void setDatasaida(string datasaida)
+
+        public void SetIdproduto(int idproduto)
         {
-            this.datasaida = datasaida;
+            Produto.idproduto = idproduto;
         }
-        public string getDatasaida()
-        {
-            return datasaida;
-        }
-        public void setIdproduto(int idproduto)
-        {
-            this.idproduto = idproduto;
-        }
-        public int getIdproduto()
+
+        public int GetIdproduto()
         {
             return idproduto;
         }
 
-        public void setQuantidadesaida(int quantidadesaida)
+        public void SetQuantidadesaida(int quantidadesaida)
         {
-            this.quantidadesaida = quantidadesaida;
+            Produto.quantidadesaida = quantidadesaida;
         }
-        public int getQuantidadesaida()
+
+        public int GetQuantidadesaida()
         {
             return quantidadesaida;
         }
-        public void setIdprodutosaida(int idprodutosaida)
+
+        public void SetIdprodutosaida(int idprodutosaida)
         {
-            this.idprodutosaida = idprodutosaida;
+            Produto.idprodutosaida = idprodutosaida;
         }
-        public int getIdprodutosaida()
+
+        public int GetIdprodutosaida()
         {
             return idprodutosaida;
         }
-        public void setidmercadoria(int idmercadoria)
+
+        public void SetIdmercadoria(int idmercadoria)
         {
-            this.idmercadoria = idmercadoria;
+            Produto.idmercadoria = idmercadoria;
         }
-        public int getIdmercadoria()
+
+        public int GetIdmercadoria()
         {
             return idmercadoria;
         }
-        public void setQuantidade(int quantidade)
+
+        public void SetQuantidade(int quantidade)
         {
-            this.quantidade = quantidade;
+            Produto.quantidade = quantidade;
         }
-        public int getUnidade()
+
+        public void SetNomeproduto(string nomeproduto)
         {
-            return unidade;
+            Produto.nomeproduto = nomeproduto;
         }
-        public void setHorasaida(string horasaida)
-        {
-            this.horasaida = horasaida;
-        }
-        public string getHorasaida()
-        {
-            return horasaida;
-        }
-        public void setNomeproduto(string nomeproduto)
-        {
-            this.nomeproduto = nomeproduto;
-        }
-        public string getNomeproduto()
+
+        public string GetNomeproduto()
         {
             return nomeproduto;
         }
-        public void setTipo(string tipo)
+
+        public void SetTipo(string tipo)
         {
-            this.tipo = tipo;
+            Produto.tipo = tipo;
         }
-        public string getTipo()
+
+        public string GetTipo()
         {
             return tipo;
         }
-        public void setPreco(double preco)
+
+        public void SetPreco(double preco)
         {
-            this.preco = preco;
+            Produto.preco = preco;
         }
-        public double getPreco()
+
+        public double GetPreco()
         {
             return preco;
         }
-        public void setHoraentrada(string horaentrada)
+
+        public void SetPrecosaida(double precosaida)
         {
-            this.horaentrada = horaentrada;
+            Produto.precosaida = precosaida;
         }
-        public string getHoraentrada()
-        {
-            return horaentrada;
-        }
-        public void setPrecosaida(double precosaida)
-        {
-            this.precosaida = precosaida;
-        }
-        public double getPrecosaida()
+
+        public double GetPrecosaida()
         {
             return precosaida;
         }
-        public int getIdempresaentrada()
+
+        public int GetIdempresaentrada()
         {
             return idempresa;
         }
-        public void setIdempresaentrada(int idempresa)
+
+        public void SetIdempresaentrada(int idempresa)
         {
-            this.idempresa = idempresa;
+            Produto.idempresa = idempresa;
         }
-        public int getIdempresasaida()
+
+        public int GetIdempresasaida()
         {
             return idprodutosaida;
         }
-        public void setIdempresasaida(int idprodutosaida)
+
+        public void SetIdempresasaida(int idprodutosaida)
         {
-            this.idprodutosaida = idprodutosaida;
+            Produto.idprodutosaida = idprodutosaida;
         }
-        public void setFornecedor(string fornecedor)
+
+        public void SetFornecedor(string fornecedor)
         {
-            this.fornecedor = fornecedor;
+            Produto.fornecedor = fornecedor;
         }
-        public string getFornecedor()
+
+        public string GetFornecedor()
         {
             return fornecedor;
         }
